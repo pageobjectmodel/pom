@@ -1,0 +1,40 @@
+{
+    "type": "Fields",
+    "title": {
+        "type": "doc",
+        "items": [
+            {
+                "type": "text",
+                "text": "Lorem Ipsum"
+            }
+        ]
+    },
+    "var": 123,
+    "intro": {
+        "type": "Variants",
+        "*": "abc",
+        "pl": {
+            "type": "doc",
+            "items": [
+                {
+                    "type": "text",
+                    "text": "Lorem Ipsum 2"
+                }
+            ]
+        },
+        "*:abc": {
+            "type": "List",
+            "items": [
+                {
+                    "type": "doc",
+                    "items": [
+                        {
+                            "type": "text",
+                            "text": "Lorem Ipsum 3"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

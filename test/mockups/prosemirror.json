@@ -1,0 +1,24 @@
+{
+    "type": "doc",
+    "contents": [{
+        "type": "heading",
+        "attrs": {
+            "level": "1"
+        },
+        "contents": [{
+            "type": "text",
+            "text": "Title"
+        }]
+    }, {
+        "type": "paragraph",
+        "contents": [{
+            "type": "text",
+            "text": "Lorem Ipsum"
+        }]
+    }, {
+        "type": "image",
+        "attrs": {
+            "src": "https://unsplash.it/200/300"
+        }
+    }]
+}

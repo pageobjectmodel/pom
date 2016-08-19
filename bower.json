@@ -1,0 +1,31 @@
+{
+  "name": "pageobjectmodel",
+  "description": "Page Object Model Library",
+  "main": "index.js",
+  "authors": [
+    "lukaszsielski@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "page",
+    "object",
+    "model",
+    "dom",
+    "yaml",
+    "json",
+    "wysiwym",
+    "wysiwig",
+    "editor",
+    "markdown",
+    "markup"
+  ],
+  "homepage": "https://github.com/pageobjectmodel/pom",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

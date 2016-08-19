@@ -1,0 +1,15 @@
+{
+    "type": "document",
+    "items": [{
+        "type": "heading",
+        "level": 1,
+        "text": "Title"
+    }, {
+        "type": "paragraph",
+        "text": "Lorem Ipsum"
+    }, {
+        "type": "image",
+        "src": "https://unsplash.it/200/300",
+        "title": "My image"
+    }]
+}

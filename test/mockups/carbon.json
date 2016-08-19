@@ -1,0 +1,23 @@
+[
+    {
+        "component": "Paragraph",
+        "name": "mgph84wu",
+        "text": "Title",
+        "placeholderText": null,
+        "paragraphType": "h1"
+    },
+    {
+        "component": "Paragraph",
+        "name": "y26540kt",
+        "text": "Lorem ipsum",
+        "placeholderText": null,
+        "paragraphType": "p"
+    },
+    {
+        "component": "Figure",
+        "name": "0ji3t7ve",
+        "width": "206px",
+        "height": "306px",
+        "caption": "",
+        "src": "https://unsplash.it/200/300"
+    }
