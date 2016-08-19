@@ -109,10 +109,10 @@ export class Node extends Emitter {
     /**
      * @constructs Node
      */
-    constructor() {
+    constructor(id) {
         super();
 
-        this.name = randomID(this);
+        this.name = id || randomID(this);
 
         this.__locked = false;
     }
@@ -188,7 +188,26 @@ export class BlockNode extends Node {
 
     }
 
+    setById(id, value) {
+        let found = false;
+        this.items.forEach((child, index) => {
+            if (found) return;
+            if (child.name === id) {
+                this.items[index] = value;
+                found = true;
+                return;
+            }
+            found = child.setById ? child.setById(id, value) : false;
+        });
+        return found;
+    }
+
     set(path, value) {
+
+        if (path[0] === '@') {
+            return this.setById(path.slice(1), value);
+        }
+
         let elements = path.split('.'),
             index = elements.shift(),
             rest = elements.join('.'),
@@ -331,10 +350,13 @@ export class TextNode extends Node {
     }
 
     decorate(element) {
+        let self = this;
         return toHTML(this, {
                 edit: true
             })
             .then((html) => {
+                element.setAttribute('contenteditable', true);
+                element.setAttribute('data-skaryna-id', self.name);
                 element.innerHTML = html.textContent;
             });
     }
@@ -451,7 +473,7 @@ export class Fields extends Node {
 
     constructor(data) {
         super();
-        this._map = data;
+        this._map = data || {};
     }
 
     get type() {

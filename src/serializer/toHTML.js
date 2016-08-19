@@ -108,6 +108,9 @@ export function element(node, nodeType, attributes, content, options) {
         let elem = document.createElement(nodeType);
         if (options && options.edit) {
             elem.setAttribute('data-skaryna-id', node.name);
+            if(node instanceof TextNode) {
+                elem.setAttribute('contenteditable','true');
+            }
         }
         if (attributes) {
             Object

@@ -32,6 +32,10 @@ export function arraize(iterable) {
     return [].slice.apply(iterable);
 }
 
+export function query(node, query) {
+    return arraize(node.querySelectorAll(query));
+}
+
 export function clone(inputs, except) {
     let result = {};
     inputs
